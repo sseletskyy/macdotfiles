@@ -1,0 +1,33 @@
+android-studio
+betterzipql
+cheatsheet
+dash
+dropbox
+filezilla
+flux
+heroku-toolbelt (!)
+iterm2
+java
+karabiner
+mysqlworkbench
+pgadmin3 (!)
+postgres
+psequel
+qlcolorcode
+qlmarkdown
+qlprettypatch
+qlstephen
+quicklook-csv
+quicklook-json
+seil
+skype
+spectacle
+sql-tabs
+sublime-text
+suspicious-package
+transmission
+vagrant
+vagrant-manager
+virtualbox
+vlc
+webpquicklook
