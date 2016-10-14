@@ -1,0 +1,39 @@
+[user]
+	name = Sergiy Seletskyy
+	email = sergiy.seletskyy@lookout.com
+[credential]
+	helper = osxkeychain
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+[merge]
+	tool = sublime
+[core]
+  editor=vim
+	autocrlf = input
+	excludesfile = /Users/sseletskyy/.gitignore_global
+[alias]
+	co = checkout
+	ci = commit -v
+	st = status
+	cat = cat-file
+	br = branch
+	ffwd = pull --rebase
+	changes = diff --name-status -r
+	diffstat = diff --stat -r
+	up = pull --rebase origin master
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[color]
+	branch = auto
+	diff = auto
+	grep = auto
+	interactive = auto
+	ui = auto
+	status = auto
+	showbranch = auto
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

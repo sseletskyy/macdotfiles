@@ -1,0 +1,30 @@
+"*":
+  blame:
+    defaultWidth: 300
+    gutterFormat: "{date} {author} {hash}"
+  core:
+    disabledPackages: [
+      "git-blame"
+      "activate-power-mode"
+      "react"
+    ]
+    themes: [
+      "one-light-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    autoIndent: false
+    invisibles: {}
+    showInvisibles: true
+    softWrapHangingIndent: 2
+    tabType: "soft"
+  emmet: {}
+  "exception-reporting":
+    userId: "7c1941e0-b064-3517-4a69-bdb92ff613e6"
+  "git-blame":
+    columnWidth: 400
+    dateFormatString: "YY-MM-DD"
+    ignoreWhiteSpaceDiffs: true
+    useCustomUrlTemplateIfStandardRemotesFail: true
+  welcome:
+    showOnStartup: false

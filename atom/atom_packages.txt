@@ -1,0 +1,22 @@
+total 8
+drwxr-xr-x  21 sseletskyy  993687553   714B Oct 14 20:32 .
+drwxr-xr-x   5 sseletskyy  993687553   170B Oct 14 20:19 ..
+-rw-r--r--   1 sseletskyy  993687553    60B Nov 30  2015 README.md
+drwxr-xr-x  12 sseletskyy  993687553   408B Sep  2 16:34 activate-power-mode
+drwxr-xr-x   8 sseletskyy  993687553   272B Nov 30  2015 atom-jasmine
+drwxr-xr-x  10 sseletskyy  993687553   340B Apr 24 01:44 auto-indent
+drwxr-xr-x  14 sseletskyy  993687553   476B Sep  2 16:35 autoprefixer
+drwxr-xr-x  17 sseletskyy  993687553   578B Apr 11  2016 blame
+drwxr-xr-x  14 sseletskyy  993687553   476B Aug  4 21:33 dash
+drwxr-xr-x  14 sseletskyy  993687553   476B Apr  3  2016 emmet
+drwxr-xr-x  11 sseletskyy  993687553   374B Sep  2 16:34 jasmine-runner
+drwxr-xr-x  17 sseletskyy  993687553   578B Sep  6 14:52 language-babel
+drwxr-xr-x   9 sseletskyy  993687553   306B Aug  4 21:37 language-plantuml
+drwxr-xr-x  13 sseletskyy  993687553   442B Sep  2 16:35 line-diff-details
+drwxr-xr-x  22 sseletskyy  993687553   748B Sep  6 15:31 markdown-preview-plus
+drwxr-xr-x  14 sseletskyy  993687553   476B Nov 30  2015 mocha
+drwxr-xr-x  15 sseletskyy  993687553   510B Aug  4 21:33 mocha-test-runner
+drwxr-xr-x   7 sseletskyy  993687553   238B Aug  4 21:33 npm
+-rw-r--r--   1 sseletskyy  993687553     0B Oct 14 20:32 packages.txt
+drwxr-xr-x  14 sseletskyy  993687553   476B Aug  4 21:37 plantuml-viewer
+drwxr-xr-x  16 sseletskyy  993687553   544B Sep  6 14:52 react
