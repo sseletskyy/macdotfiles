@@ -41,3 +41,10 @@
 	trustExitCode = true
 [diff]
 	tool = vimdiff
+[gitsh]
+    noGreeting = false
+    defaultCommand = status --short --branch && :echo
+[gitsh "color"]
+    default = cyan
+    untracked = yellow
+    modified = red
