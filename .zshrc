@@ -125,3 +125,6 @@ export FLX_TARGET=Android # This tells the Makefiles to build Android - it's the
  
 export SECURITY_CORE_PATH=$HOME/Projects/security # Tell the makefiles where it can find the security project in order to build the last version of the library.
 export TERM="xterm-256color"
+
+source ~/dotfiles/ssh-find-agent.sh
+set_ssh_agent_socket
