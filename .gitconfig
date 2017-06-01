@@ -11,7 +11,7 @@
 [core]
   editor=vim
 	autocrlf = input
-	excludesfile = /Users/sseletskyy/.gitignore_global
+	excludesfile = /Users/gustotune/.gitignore_global
 [alias]
 	co = checkout
 	ci = commit -v
@@ -25,6 +25,12 @@
 	up = pull --rebase origin master
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	vdf = difftool
+  gerrit-review-core = push origin HEAD:refs/for/master%r=vyazadji@rocketfuel.com,r=mdvoryanchenko@rocketfuel.com,r=iyani@rocketfuel.com,r=pmaliy@rocketfuel.com,r=iudovika@rocketfuel.com,r=ofomina@rocketfuel.com,r=asadreev@rocketfuel.com,r=amyroniuk@rocketfuel.com,r=achalupka@rocketfuel.com
+  gerrit-review-insights = push origin HEAD:refs/for/feature-orion-insights%r=ofomina@rocketfuel.com,r=asadreev@rocketfuel.com,r=amyroniuk@rocketfuel.com,r=dmasalovich@rocketfuel.com,r=egavrilenko@rocketfuel.com,r=kredunova@rocketfuel.com,r=ngromova@rocketfuel.com,r=vmalyshev@rocketfuel.com
+  gerrit-review-master = push origin HEAD:refs/for/feature-orion-insights%r=ofomina@rocketfuel.com,r=asadreev@rocketfuel.com,r=amyroniuk@rocketfuel.com,r=dmasalovich@rocketfuel.com,r=egavrilenko@rocketfuel.com,r=kredunova@rocketfuel.com,r=ngromova@rocketfuel.com,r=vmalyshev@rocketfuel.com
+  gerrit-core = push origin HEAD:refs/for/feature-mc-orion
+  gerrit-master = push origin HEAD:refs/for/master
+  gerrit-insights = push origin HEAD:refs/for/feature-orion-insights
 [color]
 	branch = auto
 	diff = auto
