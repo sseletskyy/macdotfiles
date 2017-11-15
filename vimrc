@@ -25,6 +25,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'rizzatti/dash.vim'
+Plugin 'posva/vim-vue'
 
 call vundle#end()
 filetype plugin indent on
@@ -46,7 +47,11 @@ set softtabstop=4 " edit as if the tabs are 4 characters wide
 set shiftwidth=4 " number of spaces to use for indent and unindent
 set shiftround " round indent to a multiple of 'shiftwidth'
 
-set clipboard=unnamed
+" next line does not work under tmux, so I added a condition
+" set clipboard=unnamed
+if $TMUX == ''
+    set clipboard+=unnamed
+endif
 
 " faster redrawing
 set ttyfast
@@ -167,3 +172,16 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 2
 nmap <silent> <leader>d <Plug>DashSearch
 :set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+
+packadd minpac
+call minpac#init()
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('k-takata/minpac', {'type':'opt'})
+
+" minpac commands:
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()

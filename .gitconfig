@@ -1,6 +1,6 @@
 [user]
 	name = Serge Seletskyy
-	email = sseletskyy@rocketfuel.com
+	email = sseletskyy@gmail.com
 [credential]
 	helper = osxkeychain
 [mergetool "sublime"]
@@ -14,23 +14,34 @@
 	excludesfile = /Users/gustotune/.gitignore_global
 [alias]
 	co = checkout
-	ci = commit -v
+  cob = checkout -b
+  com = checkout master
   cm = commit 
-	st = status
+	ci = commit -v
+  cim = commit --amend
+  wip = !git add . && SKIP=RuboCop git ci -m 'wip'
+  st = status
 	cat = cat-file
-	br = branch
+  br = branch
+  cp = cherry-pick
+  cpc = cherry-pick --continue
+  cpa = cherry-pick --abort
+  undo = reset HEAD~1
 	ffwd = pull --rebase
 	changes = diff --name-status -r
-	diffstat = diff --stat -r
-	up = pull --rebase origin master
+  diffstat = diff --stat -r
+  di = diff -U8 -w
+  dic = diff --cached -U8 -w
+  dio = !git diff -U8 -w origin/$(git br)
+  dim = diff -w origin/master
+  up = !git fetch && git pull --rebase --prune
+	upm = pull --rebase origin master
+  unfuck = !git reset --hard origin/$(git br)
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	vdf = difftool
-  gerrit-review-core = push origin HEAD:refs/for/master%r=vyazadji@rocketfuel.com,r=mdvoryanchenko@rocketfuel.com,r=iyani@rocketfuel.com,r=pmaliy@rocketfuel.com,r=iudovika@rocketfuel.com,r=ofomina@rocketfuel.com,r=asadreev@rocketfuel.com,r=amyroniuk@rocketfuel.com,r=achalupka@rocketfuel.com
-  gerrit-review-insights = push origin HEAD:refs/for/feature-orion-insights%r=ofomina@rocketfuel.com,r=asadreev@rocketfuel.com,r=amyroniuk@rocketfuel.com,r=dmasalovich@rocketfuel.com,r=egavrilenko@rocketfuel.com,r=kredunova@rocketfuel.com,r=ngromova@rocketfuel.com,r=vmalyshev@rocketfuel.com
-  gerrit-review-master = push origin HEAD:refs/for/feature-orion-insights%r=ofomina@rocketfuel.com,r=asadreev@rocketfuel.com,r=amyroniuk@rocketfuel.com,r=dmasalovich@rocketfuel.com,r=egavrilenko@rocketfuel.com,r=kredunova@rocketfuel.com,r=ngromova@rocketfuel.com,r=vmalyshev@rocketfuel.com
-  gerrit-core = push origin HEAD:refs/for/feature-mc-orion
+  slog = !git log --format='format:%h %cn %s'
+  vdf = difftool
+  gerrit-review-master = push origin HEAD:refs/for/master%r=email@dot.com
   gerrit-master = push origin HEAD:refs/for/master
-  gerrit-insights = push origin HEAD:refs/for/feature-orion-insights
 [color]
 	branch = auto
 	diff = auto
@@ -54,3 +65,10 @@
     default = cyan
     untracked = yellow
     modified = red
+[push]
+	default = simple
+[rebase]
+  instructionFormat = (%an) %s
+[branch]
+  autosetupmerge  = always
+  autosetuprebase = always
