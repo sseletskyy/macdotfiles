@@ -1,5 +1,5 @@
 [user]
-	name = Serge Seletskyy
+	name = Sergey Seletskyy
 	email = sseletskyy@gmail.com
 [credential]
 	helper = osxkeychain
@@ -34,6 +34,8 @@
   dic = diff --cached -U8 -w
   dio = !git diff -U8 -w origin/$(git br)
   dim = diff -w origin/master
+  suc = !git branch --set-upstream-to=origin/$(git br) $(git br)
+  sum = !git branch --set-upstream-to=origin/master $(git br)  
   up = !git fetch && git pull --rebase --prune
 	upm = pull --rebase origin master
   unfuck = !git reset --hard origin/$(git br)
@@ -72,3 +74,8 @@
 [branch]
   autosetupmerge  = always
   autosetuprebase = always
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
