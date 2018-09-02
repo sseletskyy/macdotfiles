@@ -1,0 +1,5 @@
+./log-f3wr.sh: line 3: ./f3write: No such file or directory
+
+
+
+./log-f3wr.sh: line 5: ./f3read: No such file or directory
