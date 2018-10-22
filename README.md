@@ -16,5 +16,9 @@ Copy git related files
 Install additional software
 BREW 
     brew install reattach-to-user-namespace  # tmux copy-paste and scroll
-    brew tap thoughtbot/formulae # requires in order to install gitsh
-    brew install gitsh
+    brew cask install spectacle clipy
+
+TMUX
+    Install Tmux Plugin Manager - https://github.com/tmux-plugins/tpm
+    Install Tmux-resurrect - https://github.com/tmux-plugins/tmux-resurrect
+

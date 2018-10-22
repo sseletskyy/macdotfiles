@@ -1,5 +1,6 @@
 android-studio
 betterzipql
+clipy
 cheatsheet
 dash
 dropbox
