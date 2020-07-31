@@ -13,11 +13,13 @@ Copy git related files
     cp ~/dotfiles/.gitignore ~/
     cp ~/dotfiles/.gitignore_global ~/
 
+    git config --global commit.template ~/dotfiles/gitmessage
+
 Install additional software
 BREW 
     brew install reattach-to-user-namespace  # tmux copy-paste and scroll
     brew cask install spectacle clipy
-
+cat ~
 TMUX
     Install Tmux Plugin Manager - https://github.com/tmux-plugins/tpm
     Install Tmux-resurrect - https://github.com/tmux-plugins/tmux-resurrect
