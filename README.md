@@ -18,7 +18,8 @@ Copy git related files
 Install additional software
 BREW 
     brew install reattach-to-user-namespace  # tmux copy-paste and scroll
-    brew cask install spectacle clipy
+    brew install ansible # Automate deployment, configuration, and upgrading
+    brew install --cask spectacle clipy keep iterm2 keka meld neovim notion vlc vscodium
 cat ~
 TMUX
     Install Tmux Plugin Manager - https://github.com/tmux-plugins/tpm
