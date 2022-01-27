@@ -1,5 +1,5 @@
 [user]
-	name = Sergey Seletskyy
+	name = Sergiy Seletskyy
 	email = sseletskyy@gmail.com
 [credential]
 	helper = osxkeychain
@@ -11,7 +11,7 @@
 [core]
     editor=vim
 	autocrlf = input
-	excludesfile = /Users/sseletskyy/dotfiles/.gitignore
+	excludesfile = ~/dotfiles/.gitignore
     attributesfile = ~/dotfiles/.gitattributes
 
     # Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -172,13 +172,9 @@
 	path = 
 	#path =
 [merge]
-
     # Include summaries of merged commits in newly created merge commit messages
     log = true
 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [diff]
 	tool = vimdiff
     # Detect copies as well as renames
@@ -203,5 +199,3 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[gui]
-	recentrepo = /Users/sseletskyy/LocalDocs/AWORK/lohika-nodejs-course

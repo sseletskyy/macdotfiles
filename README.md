@@ -1,27 +1,26 @@
-# macdotfiles
-a collection of dot files for mac
+# Dotfiles
 
-Set symlinks to files
+## Prerequisites
 
-    ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-    ln -s ~/dotfiles/vimrc ~/.vimrc
-    ln -s ~/dotfiles/tat.sh /usr/local/bin  #use tat.sh script to create a tmux session for the current dir
+Install homebrew
 
-Copy git related files
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-    cp ~/dotfiles/.gitconfig ~/
-    cp ~/dotfiles/.gitignore ~/
-    cp ~/dotfiles/.gitignore_global ~/
+Install ansible
 
-    git config --global commit.template ~/dotfiles/gitmessage
+```shell
+brew install ansible
+```
 
-Install additional software
-BREW 
-    brew install reattach-to-user-namespace  # tmux copy-paste and scroll
-    brew install ansible # Automate deployment, configuration, and upgrading
-    brew install --cask spectacle clipy keep iterm2 keka meld neovim notion vlc vscodium
-cat ~
-TMUX
-    Install Tmux Plugin Manager - https://github.com/tmux-plugins/tpm
-    Install Tmux-resurrect - https://github.com/tmux-plugins/tmux-resurrect
+## Ansible tasks
+
+Go to `~/dotfiles/ansible` folder
+
+### SSH
+
+```shell
+ansible-playbook -t ssh local.yml --verbose --ask-vault-pass
+```
 

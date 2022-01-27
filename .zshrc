@@ -56,7 +56,7 @@ plugins=(git colored-man colorize github jira vagrant virtualenv brew osx zsh-sy
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:$PATH"
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -105,7 +105,7 @@ alias zs="zeus --log ZEUS.LOG start"
 alias zr="zeus rspec spec"
 alias ws='/Applications/WebStorm.app/Contents/MacOS/webstorm'
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # PROMPT='╭─[%*] %{$fg[cyan]%}%n%{$reset_color%}:%{$fg[green]%}%c%{$reset_color%}$(git_prompt_info) 
 # ╰─%(!.#.$) '
@@ -132,4 +132,7 @@ export TERM="xterm-256color"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+source ~/dotfiles/key-bindings.zsh
+
 export PATH="/usr/local/sbin:$PATH"

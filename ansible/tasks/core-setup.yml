@@ -1,0 +1,36 @@
+- name: Install fuzzy finder
+  become: true
+  community.general.homebrew:
+    name: fzf
+    state: present
+    update_homebrew: yes
+- name: Install Simplified and community-driven man pages
+  become: true
+  community.general.homebrew:
+    name: tldr
+    state: present
+- name: Install tmux
+  become: true
+  community.general.homebrew:
+    name: tmux
+    state: present
+- name: Install reattach-to-user-namespace (for tmux)
+  become: true
+  community.general.homebrew:
+    name: reattach-to-user-namespace
+    state: present
+
+# Install Tmux Plugin Manager
+- name: Create Tmux Plugins folder
+  shell: mkdir -pv ~/.tmux/plugins
+- name: Clone the tpm repository
+  git:
+    repo: "https://github.com/tmux-plugins/tpm"
+    dest: "~/.tmux/plugins/tpm"
+    version: "HEAD"
+## Neovim
+#- name: Install neovim
+#  become: true
+#  community.general.homebrew:
+#    name: neovim
+#    state: present

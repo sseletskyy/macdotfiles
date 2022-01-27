@@ -202,3 +202,6 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
 execute pathogen#infect()
+
+" use tmux-session-manager script to jump to some folder quickly
+nnoremap <silent> <C-a> :silent !tmux neww tmux-session-manager<CR>

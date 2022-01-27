@@ -1,0 +1,14 @@
+- name: Installing stow
+  community.general.homebrew:
+    name: stow
+    state: present
+  tags:
+    - install
+    - dotfiles
+    - stow
+- name: Stow dotfiles
+  shell: cd $HOME/.dotfiles/stow && ./ubuntu
+  tags:
+    - install
+    - dotfiles
+    - stow
