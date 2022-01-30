@@ -136,3 +136,43 @@ fi
 source ~/dotfiles/key-bindings.zsh
 
 export PATH="/usr/local/sbin:$PATH"
+
+## ===========
+
+# test2
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+source ~/dotfiles/.zshrc
+
+# Customize to your needs...
+plugins=(git colored-man colorize github jira brew osx zsh-syntax-highlighting)
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+alias cd..="cd .."
+alias ..="cd .."
+alias ...=" cd ../.."
+alias tree1="tree -h -L 1"
+alias tree2="tree -h -L 2"
+
+export TERM="xterm-256color"
+
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/x86/projects/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/x86/projects/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/x86/projects/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/x86/projects/google-cloud-sdk/completion.zsh.inc'; fi

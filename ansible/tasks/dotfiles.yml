@@ -7,8 +7,12 @@
     - dotfiles
     - stow
 - name: Stow dotfiles
-  shell: cd $HOME/.dotfiles/stow && ./ubuntu
+  shell: cd $HOME/dotfiles/stow && ./macos
   tags:
     - install
     - dotfiles
     - stow
+- name: Unstow dotfiles
+  shell: cd $HOME/dotfiles/stow && ./macos-uninstall
+  tags:
+    - unstow

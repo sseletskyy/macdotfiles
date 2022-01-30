@@ -1,4 +1,5 @@
 - hosts: localhost 
+  include_vars: vars/brew-packages.yml
   vars:
     source_key: "../stow/.ssh/id_rsa"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
@@ -25,16 +26,17 @@
       include_tasks: tasks/core-setup.yml
       tags:
         - core
-
-#    - include: tasks/git-setup.yml
-#    - include: tasks/core-setup.yml
-#    - include: tasks/node-setup.yml
-#    - include: tasks/npm-packages.yml
-#    - include: tasks/zsh-setup.yml
-#    - include: tasks/slack-setup.yml
-#    - include: tasks/personal-projects.yml
-#    - include: tasks/nvim-setup.yml
-#    - include: tasks/brave.yml
-#    - include: tasks/dotfiles.yml
-#    - include: tasks/productivity-tools.yml
-
+# Install omz before stowing dotfiles
+    - name: zsh setup
+      include_tasks: tasks/oh-my-zsh.yml
+      tags:
+        - zsh
+        - oh-my-zsh
+        - install
+    - name: stow dotfiles
+      include_tasks: tasks/dotfiles.yml
+      tags:
+        - stow
+        - unstow
+        - dotfiles
+        - install

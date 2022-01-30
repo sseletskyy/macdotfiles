@@ -1,6 +1,6 @@
 [user]
 	name = Sergiy Seletskyy
-	email = s.seletskyy@catawiki.nl
+	email = sseletskyy@gmail.com
 [credential]
 	helper = osxkeychain
 #[mergetool "sublime"]
@@ -11,8 +11,8 @@
 [core]
     editor=vim
 	autocrlf = input
-	excludesfile = .generators
-    attributesfile = ~/dotfiles/.gitattributes
+	excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
 
     # Treat spaces before tabs and all kinds of trailing whitespace as an error
     # [default] trailing-space: looks for spaces at the end of a line
@@ -59,8 +59,6 @@
   ll = log --relative-date --graph --abbrev-commit
   slog = !git log --format='format:%h %cn %s'
   vdf = difftool
-  gerrit-review-master = push origin HEAD:refs/for/master%r=email@dot.com
-  gerrit-master = push origin HEAD:refs/for/master
 
         # View the current working tree status using the short format
         s = status -s
@@ -204,7 +202,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[gui]
-	recentrepo = /Users/sseletskyy/LocalDocs/AWORK/lohika-nodejs-course
 [commit]
-	template = /Users/cw2930/dotfiles/gitmessage
+	template = ~/dotfiles/gitmessage

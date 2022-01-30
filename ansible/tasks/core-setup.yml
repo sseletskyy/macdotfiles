@@ -20,6 +20,7 @@
     state: present
   tags:
     - core
+    - tmux
 - name: Install reattach-to-user-namespace (for tmux)
   become: false
   community.general.homebrew:
@@ -27,12 +28,14 @@
     state: present
   tags:
     - core
+    - tmux
 
 # Install Tmux Plugin Manager
 - name: Create Tmux Plugins folder
   shell: mkdir -pv ~/.tmux/plugins
   tags:
     - core
+    - tmux
 - name: Clone the tpm repository
   git:
     repo: "https://github.com/tmux-plugins/tpm"
@@ -40,6 +43,7 @@
     version: "HEAD"
   tags:
     - core
+    - tmux
 ## Neovim
 #- name: Install neovim
 #  become: true

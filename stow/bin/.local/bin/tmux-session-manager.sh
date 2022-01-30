@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-session=$(find ~ ~/sandbox/ -type d -mindepth 1 -maxdepth 1 | fzf)
+session=$(find ~ ~/sandbox/ ~/projects/ -type d -mindepth 1 -maxdepth 1 | fzf)
 
 session_name=$(basename "$session" | tr . _)
 

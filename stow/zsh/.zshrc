@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/bin/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # The next line enables shell command completion for gcloud.
 if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
@@ -13,7 +13,7 @@ if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/co
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ### oh-my-zsh ###
-ZSH_THEME="duellj"
+ZSH_THEME="bureau"
 
 # zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' mode reminder
@@ -45,6 +45,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(fzf git colorize macos jsontools)
 
+source ~/.oh-my-zsh/oh-my-zsh.sh
 
 listening() {
       lsof -n -iTCP:$1 | grep LISTEN
@@ -57,3 +58,10 @@ alias ,wtf='rm -rf node_modules && npm i'
 alias ,ybw='rm -rf node_modules/.cache && yarn build:watch'
 alias ,yp='yarn prettier:fix && git s'
 
+alias cd..="cd .."
+alias ..="cd .."
+alias ...=" cd ../.."
+alias tree1="tree -h -L 1"
+alias tree2="tree -h -L 2"
+
+source ~/dotfiles/key-bindings.zsh
